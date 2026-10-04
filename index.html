@@ -389,7 +389,9 @@ function esc(s){return s.replace(/&/g,"&amp;")}
   });
   host.outerHTML=html;
 })();
+var FB={"20.webp":"20.png","25.webp":"25.png","42.webp":"42.png","77.webp":"77.jpg","3j.webp":"3.jpg","17.webp":"17.png","3.webp":"3.png","26.webp":"26.png","27.webp":"27.png","6.webp":"6.jpg","8.webp":"8.png","9.webp":"9.png","5.webp":"5.jpg","15.webp":"15.png","41.webp":"41.png","59.webp":"59.png","89.webp":"89.jpg","34.webp":"34.png","57.webp":"57.png","79.webp":"79.png","53.webp":"53.png","47.webp":"47.png","50.webp":"50.png","13.webp":"13.png","52.webp":"52.png","11.webp":"11.png","43.webp":"43.png","21.webp":"21.png","61.webp":"61.jpg","1.webp":"1.jpg","18.webp":"18.png","88.webp":"88.png"};
 $$(".piece img").forEach(function(im){
+  im.addEventListener("error",function(){var k=im.getAttribute("src"),o=FB[k]; if(o){ALL.forEach(function(w){if(w.src===k)w.src=o}); im.src=o}});
   var ok=function(){im.parentNode.style.setProperty("--r",(im.naturalWidth/im.naturalHeight).toFixed(4));im.closest(".piece").classList.add("ok")};
   if(im.complete&&im.naturalWidth) ok(); else im.addEventListener("load",ok);
 });
