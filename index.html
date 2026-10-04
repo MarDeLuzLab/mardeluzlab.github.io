@@ -6,8 +6,8 @@
 <title>MAR DE LUZ LAB · Ocean & Jewels</title>
 <meta name="description" content="Mar de Luz Lab. Visual production and art direction for luxury jewellery: AI campaigns, imagery and motion where deep-sea creatures wear haute joaillerie.">
 <meta name="theme-color" content="#02060a">
-<link rel="icon" type="image/png" href="favicon.png">
-<link rel="apple-touch-icon" href="favicon.png">
+<link rel="icon" type="image/webp" href="favicon.webp">
+<link rel="apple-touch-icon" href="favicon.webp">
 <link rel="preload" href="poiret-one-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
 <style>
 @font-face{font-family:"Poiret One";src:url("poiret-one-latin-400-normal.woff2") format("woff2");font-weight:400;font-style:normal;font-display:swap}
@@ -110,8 +110,8 @@ section{position:relative;padding:clamp(90px,14vh,170px) var(--pad)}
 @media(max-width:820px){.concept{grid-template-columns:1fr;gap:26px}}
 
 /* ---------- rails ---------- */
-.chap{padding-left:0;padding-right:0}
-.chap-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:18px 40px;padding:0 var(--pad);margin-bottom:clamp(30px,6vh,64px)}
+.chap{padding:clamp(64px,9vh,130px) 0}
+.chap-head{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:18px 40px;padding:0 var(--pad);margin-bottom:clamp(14px,2.5vh,40px)}
 .chap-head .num{font-family:var(--serif);font-size:clamp(17px,1.5vw,22px);letter-spacing:.14em;color:var(--a);margin-bottom:10px;display:block}
 .chap-head p{max-width:330px;color:var(--mute);font-size:14.5px}
 .chap-meta{display:flex;align-items:center;gap:18px}
@@ -121,29 +121,33 @@ section{position:relative;padding:clamp(90px,14vh,170px) var(--pad)}
 .arrows button:hover{background:var(--a);border-color:var(--a);color:#02060a}
 .arrows svg{width:15px;height:15px}
 @media(hover:none){.arrows{display:none}}
-.rail{display:flex;align-items:center;gap:clamp(18px,3vw,46px);overflow-x:auto;overflow-y:hidden;padding:34px var(--pad) 44px;scroll-snap-type:x proximity;scrollbar-width:none;-webkit-overflow-scrolling:touch;cursor:grab}
+.rail{display:flex;align-items:center;gap:clamp(18px,3vw,46px);overflow-x:auto;overflow-y:hidden;padding:24px var(--pad) 34px;scroll-snap-type:x proximity;scrollbar-width:none;-webkit-overflow-scrolling:touch;cursor:grab}
 .rail::-webkit-scrollbar{display:none}
 .rail.drag{cursor:grabbing;scroll-snap-type:none}
 .rail.drag *{pointer-events:none}
 .piece{flex:0 0 auto;scroll-snap-align:center;position:relative;animation:bob var(--t,8s) ease-in-out var(--d,0s) infinite alternate}
 @keyframes bob{from{transform:translateY(-9px) rotate(-.5deg)}to{transform:translateY(9px) rotate(.5deg)}}
-.piece button{display:block;border-radius:4px;overflow:hidden;height:min(clamp(300px,56vh,600px),calc(84vw / var(--r,.8)));aspect-ratio:var(--r,.8);background:linear-gradient(160deg,color-mix(in srgb,var(--a) 14%,transparent),rgba(255,255,255,.02));
+.piece button{display:block;border-radius:4px;overflow:hidden;height:min(clamp(280px,50vh,600px),calc(84vw / var(--r,.8)));aspect-ratio:var(--r,.8);background:linear-gradient(160deg,color-mix(in srgb,var(--a) 14%,transparent),rgba(255,255,255,.02));
   box-shadow:0 0 0 1px var(--line),0 40px 90px -40px color-mix(in srgb,var(--a) 55%,transparent);transition:box-shadow .6s var(--ease),transform .6s var(--ease)}
 .piece img{height:100%;width:100%;object-fit:cover;opacity:0;transform:scale(1.06);transition:opacity 1.1s,transform 1.4s var(--ease);-webkit-user-drag:none;user-select:none}
 .piece.ok img{opacity:1;transform:none}
 .piece button:hover{box-shadow:0 0 0 1px var(--a),0 50px 110px -34px var(--a)}
 .piece button:hover img{transform:scale(1.045)}
-.piece figcaption{display:flex;justify-content:space-between;gap:14px;margin-top:14px;font-size:12px;letter-spacing:.06em;color:var(--mute)}
-.piece figcaption b{font-family:var(--serif);font-weight:400;font-size:18px;letter-spacing:.03em;color:var(--ink)}
+.piece figcaption{display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 14px;margin-top:14px;font-size:12px;letter-spacing:.06em;color:var(--mute)}
+.piece figcaption b{font-family:var(--serif);font-weight:400;font-size:21px;letter-spacing:.03em;color:var(--ink)}
 
 /* ---------- motion ---------- */
-.reel{flex:0 0 auto;scroll-snap-align:center;height:clamp(340px,64vh,680px);aspect-ratio:9/16;border-radius:4px;overflow:hidden;background:rgba(255,255,255,.03);box-shadow:0 0 0 1px var(--line);position:relative}
+.reel{flex:0 0 auto;scroll-snap-align:center;height:clamp(300px,52vh,640px);aspect-ratio:9/16;border-radius:4px;overflow:hidden;background:rgba(255,255,255,.03);box-shadow:0 0 0 1px var(--line);position:relative}
 .reel video{width:100%;height:100%;object-fit:cover}
-.rf{flex:0 0 auto;scroll-snap-align:center;width:calc(clamp(340px,64vh,680px)*.5625)}
+.rf{flex:0 0 auto;scroll-snap-align:center;width:calc(clamp(300px,52vh,640px)*.5625)}
 .rf .reel{width:100%;height:auto}
-.rf figcaption{display:flex;justify-content:space-between;gap:14px;margin-top:14px;font-size:12px;letter-spacing:.06em;color:var(--mute)}
-.rf figcaption b{font-family:var(--serif);font-weight:400;font-size:18px;letter-spacing:.03em;color:var(--ink)}
-#court .rail{align-items:flex-start}
+.rf figcaption{display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 14px;margin-top:14px;font-size:12px;letter-spacing:.06em;color:var(--mute)}
+.rf figcaption b{font-family:var(--serif);font-weight:400;font-size:21px;letter-spacing:.03em;color:var(--ink)}
+#court .rail,#motion .rail{align-items:flex-start}
+.an{flex:0 0 100%;order:-1;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--a)}
+.an small{display:block;font-size:inherit;color:var(--mute);letter-spacing:.14em;margin-top:3px}
+.piece figcaption,.rf figcaption{width:0;min-width:100%}
+.piece figcaption b,.rf figcaption b{flex:1 1 0;min-width:0}
 .rf .tg{color:var(--ink);padding-top:9px;margin-top:5px;border-top:1px solid var(--line)}
 .reel::after{content:attr(data-n);position:absolute;left:14px;top:12px;font-size:10.5px;letter-spacing:.2em;color:#fff;mix-blend-mode:difference}
 
@@ -252,12 +256,12 @@ footer a{color:var(--ink)}
     <div class="chap-meta"><span class="count">06 <span data-i="films">films</span></span><div class="arrows"></div></div>
   </div>
   <div class="rail" data-rail>
-    <div class="reel" data-n="01"><video muted loop playsinline preload="none" data-src="video2.mp4"></video></div>
-    <div class="reel" data-n="02"><video muted loop playsinline preload="none" data-src="video4.mp4"></video></div>
-    <div class="reel" data-n="03"><video muted loop playsinline preload="none" data-src="video5.mp4"></video></div>
-    <div class="reel" data-n="04"><video muted loop playsinline preload="none" data-src="video6.mp4"></video></div>
-    <div class="reel" data-n="05"><video muted loop playsinline preload="none" data-src="video8.mp4"></video></div>
-    <div class="reel" data-n="06"><video muted loop playsinline preload="none" data-src="video9.mp4"></video></div>
+    <figure class="rf"><div class="reel" data-n="01"><video muted loop playsinline preload="none" data-src="video2.mp4" aria-label="Deep Sapphire"></video></div><figcaption><span class="an"><span data-en="Portuguese man o' war" data-es="Carabela portuguesa">Portuguese man o' war</span><small>Physalia physalis</small></span><b>Deep Sapphire</b><span>0.01</span></figcaption></figure>
+    <figure class="rf"><div class="reel" data-n="02"><video muted loop playsinline preload="none" data-src="video4.mp4" aria-label="Silver Crown"></video></div><figcaption><span class="an"><span data-en="Compass jellyfish" data-es="Medusa de compases">Compass jellyfish</span><small>Chrysaora hysoscella</small></span><b>Silver Crown</b><span>0.02</span></figcaption></figure>
+    <figure class="rf"><div class="reel" data-n="03"><video muted loop playsinline preload="none" data-src="video5.mp4" aria-label="Black Diamond Seahorse"></video></div><figcaption><span class="an"><span data-en="Yellow seahorse" data-es="Caballito de mar amarillo">Yellow seahorse</span><small>Hippocampus kuda</small></span><b>Black Diamond Seahorse</b><span>0.03</span></figcaption></figure>
+    <figure class="rf"><div class="reel" data-n="04"><video muted loop playsinline preload="none" data-src="video6.mp4" aria-label="Diamond Drop"></video></div><figcaption><span class="an"><span data-en="Crystal jelly" data-es="Medusa de cristal">Crystal jelly</span><small>Aequorea victoria</small></span><b>Diamond Drop</b><span>0.04</span></figcaption></figure>
+    <figure class="rf"><div class="reel" data-n="05"><video muted loop playsinline preload="none" data-src="video8.mp4" aria-label="Lavender Crown"></video></div><figcaption><span class="an"><span data-en="Mauve stinger" data-es="Medusa luminiscente">Mauve stinger</span><small>Pelagia noctiluca</small></span><b>Lavender Crown</b><span>0.05</span></figcaption></figure>
+    <figure class="rf"><div class="reel" data-n="06"><video muted loop playsinline preload="none" data-src="video9.mp4" aria-label="Golden Sun"></video></div><figcaption><span class="an"><span data-en="Golden jellyfish" data-es="Medusa dorada">Golden jellyfish</span><small>Mastigias papua</small></span><b>Golden Sun</b><span>0.06</span></figcaption></figure>
   </div>
 </section>
 
@@ -270,12 +274,12 @@ footer a{color:var(--ink)}
     <div class="chap-meta"><span class="count">06 <span data-i="films">films</span></span><div class="arrows"></div></div></div>
   </div>
   <div class="rail" data-rail>
-    <figure class="rf"><div class="reel" data-n="01"><video muted loop playsinline preload="none" data-src="moray.mp4" aria-label="Emerald Moray"></video></div><figcaption><b>Emerald Moray</b><span>VII.01</span></figcaption></figure>
-    <figure class="rf"><div class="reel" data-n="02"><video muted loop playsinline preload="none" data-src="manta.mp4" aria-label="Sapphire Manta"></video></div><figcaption><b>Sapphire Manta</b><span>VII.02</span></figcaption></figure>
-    <figure class="rf"><div class="reel" data-n="03"><video muted loop playsinline preload="none" data-src="ray.mp4" aria-label="Pearl Stingray"></video></div><figcaption><b>Pearl Stingray</b><span>VII.03</span></figcaption></figure>
-    <figure class="rf"><div class="reel" data-n="04"><video muted loop playsinline preload="none" data-src="octopus.mp4" aria-label="Octopus Medallion"></video></div><figcaption><b>Octopus Medallion</b><span>VII.04</span></figcaption></figure>
-    <figure class="rf"><div class="reel" data-n="05"><video muted loop playsinline preload="none" data-src="octopus-ring.mp4" aria-label="Octopus Solitaire"></video></div><figcaption><b>Octopus Solitaire</b><span>VII.05</span></figcaption></figure>
-    <figure class="rf"><div class="reel" data-n="06"><video muted loop playsinline preload="none" data-src="seahorses.mp4" aria-label="Emerald Seadragon"></video></div><figcaption><b>Emerald Seadragon</b><span>VII.06</span></figcaption></figure>
+    <figure class="rf"><div class="reel" data-n="01"><video muted loop playsinline preload="none" data-src="moray.mp4" aria-label="Emerald Moray"></video></div><figcaption><span class="an"><span data-en="Leopard moray" data-es="Morena leopardo">Leopard moray</span><small>Muraena pardalis</small></span><b>Emerald Moray</b><span>VII.01</span></figcaption></figure>
+    <figure class="rf"><div class="reel" data-n="02"><video muted loop playsinline preload="none" data-src="manta.mp4" aria-label="Sapphire Manta"></video></div><figcaption><span class="an"><span data-en="Manta ray" data-es="Mantarraya">Manta ray</span><small>Mobula birostris</small></span><b>Sapphire Manta</b><span>VII.02</span></figcaption></figure>
+    <figure class="rf"><div class="reel" data-n="03"><video muted loop playsinline preload="none" data-src="ray.mp4" aria-label="Pearl Stingray"></video></div><figcaption><span class="an"><span data-en="Pearl stingray" data-es="Raya perla">Pearl stingray</span><small>Urogymnus asperrimus</small></span><b>Pearl Stingray</b><span>VII.03</span></figcaption></figure>
+    <figure class="rf"><div class="reel" data-n="04"><video muted loop playsinline preload="none" data-src="octopus.mp4" aria-label="Octopus Medallion"></video></div><figcaption><span class="an"><span data-en="Common octopus" data-es="Pulpo común">Common octopus</span><small>Octopus vulgaris</small></span><b>Octopus Medallion</b><span>VII.04</span></figcaption></figure>
+    <figure class="rf"><div class="reel" data-n="05"><video muted loop playsinline preload="none" data-src="octopus-ring.mp4" aria-label="Octopus Solitaire"></video></div><figcaption><span class="an"><span data-en="Common octopus" data-es="Pulpo común">Common octopus</span><small>Octopus vulgaris</small></span><b>Octopus Solitaire</b><span>VII.05</span></figcaption></figure>
+    <figure class="rf"><div class="reel" data-n="06"><video muted loop playsinline preload="none" data-src="seahorses.mp4" aria-label="Emerald Seadragon"></video></div><figcaption><span class="an"><span data-en="Leafy seadragon &amp; seahorse" data-es="Dragón de mar foliáceo y caballito">Leafy seadragon &amp; seahorse</span><small>Phycodurus eques</small></span><b>Emerald Seadragon</b><span>VII.06</span></figcaption></figure>
   </div>
 </section>
 
@@ -348,22 +352,22 @@ var $ = function(s,c){return (c||document).querySelector(s)}, $$ = function(s,c)
 var CHAPTERS = [
  {id:"sapphire", num:"I", en:"Sapphire <i>depths</i>", es:"Profundidad <i>zafiro</i>", g:"Sapphire", ges:"Zafiro", a:"#7da2ff", w:"#050c22",
   pen:"Blue stones against blue water. The coldest light of the collection.", pes:"Piedras azules sobre agua azul. La luz más fría de la colección.",
-  items:[["20.png","Sapphire Tiara"],["25.png","Deep Sapphire"],["42.png","Sapphire Filigree"],["77.jpg","Sapphire Wave"],["3.jpg","Ghost & Sapphire"],["17.png","Coral Diadem"]]},
+  items:[["20.webp","Sapphire Tiara","Blue blubber jellyfish","Medusa azul","Catostylus mosaicus"],["25.webp","Deep Sapphire","Portuguese man o' war","Carabela portuguesa","Physalia physalis"],["42.webp","Sapphire Filigree","Sea nettle","Ortiga de mar","Chrysaora"],["77.webp","Sapphire Wave","Sea nettle","Ortiga de mar","Chrysaora"],["3j.webp","Ghost & Sapphire","Sea nettle","Ortiga de mar","Chrysaora"],["17.webp","Coral Diadem","Mauve stinger","Medusa luminiscente","Pelagia noctiluca"]]},
  {id:"emerald", num:"II", en:"Emerald <i>gardens</i>", es:"Jardines <i>esmeralda</i>", g:"Emerald", ges:"Esmeralda", a:"#55dba6", w:"#03140f",
   pen:"Green set against coral and copper, like reef seen from above.", pes:"Verde sobre coral y cobre, como un arrecife visto desde arriba.",
-  items:[["3.png","Crimson & Emerald"],["26.png","Emerald & Coral"],["27.png","Copper & Emerald"],["6.jpg","Emeraude"],["8.png","Primavera"],["9.png","Blue Planet"]]},
+  items:[["3.webp","Crimson & Emerald","Big red jellyfish","Gran medusa roja","Tiburonia granrojo"],["26.webp","Emerald & Coral","Cauliflower jellyfish","Medusa coliflor","Cephea cephea"],["27.webp","Copper & Emerald","Pacific sea nettle","Ortiga de mar del Pacífico","Chrysaora fuscescens"],["6.webp","Emeraude","Pacific sea nettle","Ortiga de mar del Pacífico","Chrysaora fuscescens"],["8.webp","Primavera","Crystal jelly","Medusa de cristal","Aequorea victoria"],["9.webp","Blue Planet","Mauve stinger","Medusa luminiscente","Pelagia noctiluca"]]},
  {id:"rose", num:"III", en:"Rose <i>&amp; violet</i>", es:"Rosa <i>y violeta</i>", g:"Rose", ges:"Rosa", a:"#f3a9cd", w:"#160a18",
   pen:"The softest chapter. Crowns, baroque roses and lavender light.", pes:"El capítulo más suave. Coronas, rosas barrocas y luz lavanda.",
-  items:[["5.jpg","Violet Orbit"],["15.png","Lavender Crown"],["41.png","Pink Queen"],["59.png","Rosa Barocca"],["89.jpg","Rosa Barocca II"],["34.png","La flor"]]},
+  items:[["5.webp","Violet Orbit","Mauve stinger","Medusa luminiscente","Pelagia noctiluca"],["15.webp","Lavender Crown","Mauve stinger","Medusa luminiscente","Pelagia noctiluca"],["41.webp","Pink Queen","Pink meanie","Medusa rosa","Drymonema larsoni"],["59.webp","Rosa Barocca","Pink meanie","Medusa rosa","Drymonema larsoni"],["89.webp","Rosa Barocca II","Pink meanie","Medusa rosa","Drymonema larsoni"],["34.webp","La flor","Flower hat jellyfish","Medusa sombrero de flores","Olindias formosus"]]},
  {id:"gold", num:"IV", en:"Gold <i>&amp; fire</i>", es:"Oro <i>y fuego</i>", g:"Gold", ges:"Oro", a:"#f4bc6a", w:"#150d05",
   pen:"Warm metal, rubies and sunset stones glowing from within.", pes:"Metal cálido, rubíes y piedras de atardecer que brillan desde dentro.",
-  items:[["57.png","Golden Bloom"],["79.png","Golden Sun"],["53.png","Fire & Ruby"],["47.png","Sunset Riviere"],["50.png","Compass Rose"],["13.png","Rainbow Luz"]]},
+  items:[["57.webp","Golden Bloom","Lion's mane jellyfish","Melena de león","Cyanea capillata"],["79.webp","Golden Sun","Golden jellyfish","Medusa dorada","Mastigias papua"],["53.webp","Fire & Ruby","Lion's mane jellyfish","Melena de león","Cyanea capillata"],["47.webp","Sunset Riviere","Mauve stinger","Medusa luminiscente","Pelagia noctiluca"],["50.webp","Compass Rose","Compass jellyfish","Medusa de compases","Chrysaora hysoscella"],["13.webp","Rainbow Luz","Barrel jellyfish","Aguamala","Rhizostoma pulmo"]]},
  {id:"diamond", num:"V", en:"Diamond <i>&amp; silver</i>", es:"Diamante <i>y plata</i>", g:"Diamond", ges:"Diamante", a:"#e3edf8", w:"#090c11",
   pen:"Pure line and white light. Nothing but the stone and the creature.", pes:"Línea pura y luz blanca. Solo la piedra y la criatura.",
-  items:[["52.png","Diamond Drop"],["11.png","Diamond Orbit"],["43.png","Silver Crown"],["21.png","Pure Line"],["61.jpg","Obsidian Eye"]]},
+  items:[["52.webp","Diamond Drop","Crystal jelly","Medusa de cristal","Aequorea victoria"],["11.webp","Diamond Orbit","Sea gooseberry","Grosella de mar","Pleurobrachia pileus"],["43.webp","Silver Crown","Compass jellyfish","Medusa de compases","Chrysaora hysoscella"],["21.webp","Pure Line","Moon jellyfish","Medusa luna","Aurelia aurita"],["61.webp","Obsidian Eye","Crystal jelly","Medusa de cristal","Aequorea victoria"]]},
  {id:"seahorses", num:"VI", en:"Sea<i>horses</i>", es:"Caballitos <i>de mar</i>", g:"Seahorses", ges:"Caballitos", a:"#8ad8ea", w:"#06131a",
   pen:"The smallest knights of the sea, dressed for court.", pes:"Los caballeros más pequeños del mar, vestidos para la corte.",
-  items:[["1.jpg","Knight & Rose Sapphire"],["18.png","Seahorse Duo"],["88.png","Golden Seahorse"]]}
+  items:[["1.webp","Knight & Rose Sapphire","Thorny seahorse","Caballito de mar espinoso","Hippocampus histrix"],["18.webp","Seahorse Duo","Thorny seahorse","Caballito de mar espinoso","Hippocampus histrix"],["88.webp","Golden Seahorse","Long-snouted seahorse","Caballito de mar mediterráneo","Hippocampus guttulatus"]]}
 ];
 var ALL = [];
 var ARR_L='<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M10 3L5 8l5 5"/></svg>', ARR_R='<svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M6 3l5 5-5 5"/></svg>';
@@ -377,9 +381,9 @@ function esc(s){return s.replace(/&/g,"&amp;")}
       +'<div class="chap-meta"><span class="count">'+("0"+c.items.length).slice(-2)+' <span data-i="pieces">pieces</span></span><div class="arrows"></div></div></div></div>'
       +'<div class="rail" data-rail>';
     c.items.forEach(function(it,i){
-      var n=ALL.length; ALL.push({src:it[0],t:it[1],c:c});
+      var n=ALL.length, an=it[2], anes=it[3]; ALL.push({src:it[0],t:it[1],c:c,an:an,anes:anes});
       html+='<figure class="piece" style="--t:'+(7+(n%4)*1.3)+'s;--d:-'+(n%5)*1.7+'s"><button type="button" data-n="'+n+'" aria-label="'+esc(it[1])+'"><img loading="lazy" decoding="async" src="'+it[0]+'" alt="'+esc(it[1])+' – Mar de Luz Lab" draggable="false"></button>'
-        +'<figcaption><b>'+esc(it[1])+'</b><span>'+c.num+'.'+("0"+(i+1)).slice(-2)+'</span></figcaption></figure>';
+        +'<figcaption><span class="an"><span data-en="'+an+'" data-es="'+anes+'">'+an+'</span><small>'+it[4]+'</small></span><b>'+esc(it[1])+'</b><span>'+c.num+'.'+("0"+(i+1)).slice(-2)+'</span></figcaption></figure>';
     });
     html+='</div></section>';
   });
@@ -488,7 +492,7 @@ $$("[data-rail]").forEach(function(rail){
 
 /* ================= LIGHTBOX ================= */
 var lb=$("#lb"), lbi=$("img",lb), lbt=$(".cap span",lb), lbs=$(".cap small",lb), li=0, lastF=null;
-function show(n){ li=(n+ALL.length)%ALL.length; var w=ALL[li]; lbi.src=w.src; lbi.alt=w.t; lbt.textContent=w.t; lbs.textContent=(lang==="es"?w.c.ges:w.c.g)+" · "+(li+1)+" / "+ALL.length }
+function show(n){ li=(n+ALL.length)%ALL.length; var w=ALL[li]; lbi.src=w.src; lbi.alt=w.t; lbt.textContent=w.t; lbs.textContent=(lang==="es"?w.anes:w.an)+" · "+(lang==="es"?w.c.ges:w.c.g)+" · "+(li+1)+" / "+ALL.length }
 function openLb(n){ lastF=document.activeElement; show(n); lb.classList.add("open"); document.body.style.overflow="hidden"; $(".x",lb).focus() }
 function closeLb(){ lb.classList.remove("open"); document.body.style.overflow=""; if(lastF)lastF.focus() }
 document.addEventListener("click",function(e){ var b=e.target.closest(".piece button"); if(b) openLb(+b.dataset.n) });
